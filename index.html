@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Freshman Pomodoro Clock Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <progress id="js-progress" value="0"></progress>
+      <div class="progress-bar"></div>
+      <div class = "session-box">
+        session&nbsp<span id = "session-count">0</span>
+      </div>
+      <label>
+        <select id="start-choice">
+          <option value = "start-sound" disabled>Start sound</option>
+          <option value = "break">break</option>
+          <option value = "button" selected>button</option>
+          <option value = "click">click</option>
+          <option value = "lego">lego</option>
+          <option value = "shutter">shutter</option>
+          <option value = "soft noti">soft noti</option>
+        </select>
+        <select id="break-choice">
+          <option value = "break-sound" disabled>Break sound</option>
+          <option value = "break">break</option>
+          <option value = "button" selected>button</option>
+          <option value = "click">click</option>
+          <option value = "lego">lego</option>
+          <option value = "shutter">shutter</option>
+          <option value = "soft noti">soft noti</option>
+        </select>
+      </label>
+      <div class="timer">
+        <div class="button-group mode-buttons" id="js-mode-buttons">
+          <button
+            data-mode="pomodoro"
+            class="button active mode-button"
+            id="js-pomodoro"
+          >
+            Pomodoro
+          </button>
+          <button
+            data-mode="break"
+            class="button mode-button"
+            id="js-break"
+          >
+            Break
+          </button>
+        </div>
+        <div class="clock" id="js-clock">
+          <span id="js-minutes">25</span>
+          <span class="separator">:</span>
+          <span id="js-seconds">00</span>
+        </div>
+        <button class="main-button" data-action="start" id="js-btn">
+          Start
+        </button>
+      </div>
+    </main>
+    <div class="hidden">
+      <audio id = "audio-pomodoro" src="/assets/break.mp3" data-sound="pomodoro"></audio>
+      <audio id = "audio-break" src="/assets/break.mp3" data-sound="break"></audio>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
