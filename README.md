@@ -2,6 +2,8 @@
 
 Learned from and expanded on this tutorial: https://freshman.tech/pomodoro-timer
 
+Check it out [here](https://austinszeng.github.io/my-pomodoro/)!
+
 ## Personal goals for this project
 - Gain more frontend development experience by building a project with a few more elements
 - Learn from an existing project
